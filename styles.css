@@ -25,6 +25,12 @@ header {
     text-align: center;
 }
 
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 header h1 {
     margin-bottom: 10px;
 }
@@ -53,21 +59,29 @@ header h1 {
 }
 
 /* Section Styles */
-section {
+.section {
     padding: 80px 0;
 }
 
-section h2 {
+.section-heading {
     text-align: center;
     margin-bottom: 40px;
+    position: relative;
+}
+
+.section-heading h2 {
     font-size: 2.5rem;
     color: #333;
 }
 
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+.underline {
+    width: 80px;
+    height: 3px;
+    background-color: #333;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .project {
@@ -76,6 +90,9 @@ section h2 {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
 }
 
 .project:hover {
@@ -94,6 +111,43 @@ section h2 {
     color: #666;
 }
 
+.project-details {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+.project:hover .project-details {
+    display: block;
+    transform: translateY(0);
+}
+
+.project-details.active {
+    display: block;
+    transform: translateY(0);
+}
+
+.project-details h3 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.project-details p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
 .btn {
     display: inline-block;
     padding: 8px 20px;
@@ -102,10 +156,21 @@ section h2 {
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 10px;
 }
 
 .btn:hover {
     background-color: #555;
+}
+
+.close-btn {
+    margin-top: 10px;
+    background-color: #ccc;
+    color: #333;
+}
+
+.close-btn:hover {
+    background-color: #999;
 }
 
 /* Skills Section */

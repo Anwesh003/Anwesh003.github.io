@@ -5,23 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anwesh Krishna B - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Anwesh Krishna B</h1>
-            <p class="subtitle">Engineering Student | Android & Web Developer</p>
-            <ul class="contact-info">
-                <li><strong>Phone:</strong> +91 9686543974</li>
-                <li><strong>Email:</strong> <a href="mailto:anweshkrishnab6324@gmail.com">anweshkrishnab6324@gmail.com</a></li>
-                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/anwesh-krishna-b" target="_blank">anwesh-krishna-b</a></li>
-            </ul>
+            <div class="header-content">
+                <h1>Anwesh Krishna B</h1>
+                <p class="subtitle">Engineering Student | Android & Web Developer</p>
+                <ul class="contact-info">
+                    <li><strong>Phone:</strong> +91 9686543974</li>
+                    <li><strong>Email:</strong> <a href="mailto:anweshkrishnab6324@gmail.com">anweshkrishnab6324@gmail.com</a></li>
+                    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/anwesh-krishna-b" target="_blank">anwesh-krishna-b</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
     <section id="about">
         <div class="container">
-            <h2>About Me</h2>
+            <div class="section-heading">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+            </div>
             <p>I am a dedicated and enthusiastic engineering student at Vivekananda College of Engineering and Technology, specializing in Android and web development. I have a strong passion for software development and continuously seek to enhance my skills.</p>
             <p>My academic journey and hands-on projects have equipped me with a solid foundation in programming languages like Python, C, Dart, and Java, as well as web development technologies including HTML, CSS, JavaScript, AngularJS, and PHP.</p>
             <p>My goal is to create innovative and user-friendly applications that solve real-world problems.</p>
@@ -30,19 +36,29 @@
 
     <section id="projects">
         <div class="container">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project">
-                    <h3>BE_HELPER</h3>
-                    <p>Engineered BE_HELPER mobile application using Flutter and Dart, providing engineering students a centralized platform for categorized study materials, user authentication, and offline access. Increased resource accessibility by 50% and user retention by 30%.</p>
-                    <p><strong>Duration:</strong> 10/2022 - 11/2023</p>
-                    <a href="#" class="btn">View Project</a>
+            <div class="section-heading">
+                <h2>Projects</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="project" id="project1">
+                <h3>BE_HELPER</h3>
+                <p>Engineered BE_HELPER mobile application using Flutter and Dart, providing engineering students a centralized platform for categorized study materials, user authentication, and offline access. Increased resource accessibility by 50% and user retention by 30%.</p>
+                <p><strong>Duration:</strong> 10/2022 - 11/2023</p>
+                <a href="#" class="btn" onclick="toggleDetails('project1')">View Project</a>
+                <div class="project-details" id="project1-details">
+                    <p>This project involved creating a mobile application using Flutter and Dart. It provided engineering students with a platform for accessing categorized study materials, user authentication, and offline access.</p>
+                    <p>It successfully increased resource accessibility by 50% and improved user retention by 30%.</p>
+                    <a href="#" class="btn close-btn" onclick="toggleDetails('project1')">Close</a>
                 </div>
-                <div class="project">
-                    <h3>Workforce Management System</h3>
-                    <p>Engineered a PHP-based Workforce Management System integrated with MySQL, streamlining employee scheduling and attendance tracking. Improved operational efficiency by 40% and reduced scheduling conflicts by 30%.</p>
-                    <p><strong>Duration:</strong> 03/2024 - 04/2024</p>
-                    <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project" id="project2">
+                <h3>Workforce Management System</h3>
+                <p>Engineered a PHP-based Workforce Management System integrated with MySQL, streamlining employee scheduling and attendance tracking. Improved operational efficiency by 40% and reduced scheduling conflicts by 30%.</p>
+                <p><strong>Duration:</strong> 03/2024 - 04/2024</p>
+                <a href="#" class="btn" onclick="toggleDetails('project2')">View Project</a>
+                <div class="project-details" id="project2-details">
+                    <p>This project focused on creating a PHP-based system integrated with MySQL for workforce management. It streamlined employee scheduling and attendance tracking, resulting in a 40% improvement in operational efficiency and a 30% reduction in scheduling conflicts.</p>
+                    <a href="#" class="btn close-btn" onclick="toggleDetails('project2')">Close</a>
                 </div>
             </div>
         </div>
@@ -50,7 +66,10 @@
 
     <section id="skills">
         <div class="container">
-            <h2>Technical Skills</h2>
+            <div class="section-heading">
+                <h2>Technical Skills</h2>
+                <div class="underline"></div>
+            </div>
             <ul class="skills-list">
                 <li>Fluent in: Python, C, Dart</li>
                 <li>Proficient in: Java</li>
@@ -66,5 +85,7 @@
             <p>&copy; 2024 Anwesh Krishna B. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
