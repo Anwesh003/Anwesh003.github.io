@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="animations.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <div class="container">
             <div class="header-content">
@@ -29,7 +30,8 @@
         </div>
     </header>
 
-    <section id="about">
+    <!-- About Section -->
+    <section id="about" class="section">
         <div class="container">
             <div class="section-heading">
                 <h2>About Me</h2>
@@ -41,7 +43,8 @@
         </div>
     </section>
 
-    <section id="projects">
+    <!-- Projects Section -->
+    <section id="projects" class="section">
         <div class="container">
             <div class="section-heading">
                 <h2>Projects</h2>
@@ -68,10 +71,21 @@
                     <a href="#" class="btn close-btn" onclick="toggleDetails('project2')">Close</a>
                 </div>
             </div>
+            <div class="project" id="project3">
+                <h3>Portfolio Website</h3>
+                <p>Designed and developed a responsive portfolio website using HTML, CSS, and JavaScript, showcasing skills, projects, and contact information. Improved accessibility and engagement with potential clients.</p>
+                <p><strong>Duration:</strong> 06/2024 - 07/2024</p>
+                <a href="#" class="btn" onclick="toggleDetails('project3')">View Project</a>
+                <div class="project-details" id="project3-details">
+                    <p>This project involved creating a responsive portfolio website using HTML, CSS, and JavaScript. It showcased skills, projects, and contact information, enhancing accessibility and engagement with potential clients.</p>
+                    <a href="#" class="btn close-btn" onclick="toggleDetails('project3')">Close</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="skills">
+    <!-- Skills Section -->
+    <section id="skills" class="section">
         <div class="container">
             <div class="section-heading">
                 <h2>Technical Skills</h2>
@@ -87,7 +101,8 @@
         </div>
     </section>
 
-    <section id="contact">
+    <!-- Contact Section -->
+    <section id="contact" class="section">
         <div class="container">
             <div class="section-heading">
                 <h2>Contact Me</h2>
@@ -111,12 +126,14 @@
         </div>
     </section>
 
+    <!-- Footer Section -->
     <footer>
         <div class="container">
             <p>&copy; 2024 Anwesh Krishna B. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="scripts.js"></script>
 </body>
 </html>

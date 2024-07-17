@@ -1,5 +1,5 @@
-// Function to toggle project details
+// Toggle project details visibility
 function toggleDetails(projectId) {
-    const details = document.getElementById(projectId + '-details');
-    details.classList.toggle('active');
+    const projectDetails = document.getElementById(`${projectId}-details`);
+    projectDetails.classList.toggle('active');
 }

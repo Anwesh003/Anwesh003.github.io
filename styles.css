@@ -1,4 +1,4 @@
-/* Reset and General Styles */
+/* General Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -29,8 +29,8 @@ header {
 
 .header-content {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 .name {
@@ -49,11 +49,12 @@ header {
 
 .nav-menu {
     list-style: none;
+    text-align: center;
     display: flex;
 }
 
 .nav-menu li {
-    margin-right: 20px;
+    margin: 0 10px;
 }
 
 .nav-menu li a {
@@ -84,27 +85,13 @@ header {
     transform: rotate(45deg);
 }
 
-.nav-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    width: 100%;
-    text-align: center;
-    display: none;
-}
-
 .nav-toggle:checked + .nav-toggle-label + nav .nav-menu {
     display: block;
 }
 
-.nav-menu li {
-    margin: 15px 0;
-}
-
 /* Section Styles */
 .section {
-    padding: 80px 0;
+    padding: 40px 0;
 }
 
 .section-heading {
@@ -131,15 +118,14 @@ header {
 .project {
     background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 20px;
 }
 
 .project:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .project h3 {
@@ -198,6 +184,7 @@ header {
 .skills-list {
     list-style-type: none;
     padding: 0;
+    text-align: center;
 }
 
 .skills-list li {
@@ -207,8 +194,6 @@ header {
 
 /* Contact Form Styles */
 .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
     background-color: #fff;
     padding: 30px;
     border-radius: 8px;
