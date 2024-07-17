@@ -1,139 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anwesh Krishna B - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="animations.css">
-</head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <h1 class="name">Anwesh Krishna B</h1>
-                <p class="tagline">Android Developer | Front End Developer | Web Developer</p>
-                <input type="checkbox" id="nav-toggle" class="nav-toggle">
-                <nav>
-                    <ul class="nav-menu">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <label for="nav-toggle" class="nav-toggle-label">
-                    <span></span>
-                </label>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Anwesh Krishna B</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Anwesh Krishna B</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-heading">
-                <h2>About Me</h2>
-                <div class="underline"></div>
-            </div>
-            <p>I am a dedicated and enthusiastic engineering student at Vivekananda College of Engineering and Technology, specializing in Android and web development. I have a strong passion for software development and continuously seek to enhance my skills.</p>
-            <p>My academic journey and hands-on projects have equipped me with a solid foundation in programming languages like Python, C, Dart, and Java, as well as web development technologies including HTML, CSS, JavaScript, AngularJS, and PHP.</p>
-            <p>My goal is to create innovative and user-friendly applications that solve real-world problems.</p>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Anwesh Krishna B profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Anwesh Krishna B</h1>
+        <p class="section__text__p2">Frontend Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/ANWESH KRISHNA B.pdf')"
+          >
+            RESUME
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/anwesh-krishna-b-b29918220/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/anwesh003/'"
+          />
+        </div>
+      </div>
     </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <div class="section-heading">
-                <h2>Projects</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="project" id="project1">
-                <h3>BE_HELPER</h3>
-                <p>Engineered BE_HELPER mobile application using Flutter and Dart, providing engineering students a centralized platform for categorized study materials, user authentication, and offline access. Increased resource accessibility by 50% and user retention by 30%.</p>
-                <p><strong>Duration:</strong> 10/2022 - 11/2023</p>
-                <a href="#" class="btn" onclick="toggleDetails('project1')">View Project</a>
-                <div class="project-details" id="project1-details">
-                    <p>This project involved creating a mobile application using Flutter and Dart. It provided engineering students with a platform for accessing categorized study materials, user authentication, and offline access.</p>
-                    <p>It successfully increased resource accessibility by 50% and improved user retention by 30%.</p>
-                    <a href="#" class="btn close-btn" onclick="toggleDetails('project1')">Close</a>
-                </div>
-            </div>
-            <div class="project" id="project2">
-                <h3>Workforce Management System</h3>
-                <p>Engineered a PHP-based Workforce Management System integrated with MySQL, streamlining employee scheduling and attendance tracking. Improved operational efficiency by 40% and reduced scheduling conflicts by 30%.</p>
-                <p><strong>Duration:</strong> 03/2024 - 04/2024</p>
-                <a href="#" class="btn" onclick="toggleDetails('project2')">View Project</a>
-                <div class="project-details" id="project2-details">
-                    <p>This project focused on creating a PHP-based system integrated with MySQL for workforce management. It streamlined employee scheduling and attendance tracking, resulting in a 40% improvement in operational efficiency and a 30% reduction in scheduling conflicts.</p>
-                    <a href="#" class="btn close-btn" onclick="toggleDetails('project2')">Close</a>
-                </div>
-            </div>
-            <div class="project" id="project3">
-                <h3>Portfolio Website</h3>
-                <p>Designed and developed a responsive portfolio website using HTML, CSS, and JavaScript, showcasing skills, projects, and contact information. Improved accessibility and engagement with potential clients.</p>
-                <p><strong>Duration:</strong> 06/2024 - 07/2024</p>
-                <a href="#" class="btn" onclick="toggleDetails('project3')">View Project</a>
-                <div class="project-details" id="project3-details">
-                    <p>This project involved creating a responsive portfolio website using HTML, CSS, and JavaScript. It showcased skills, projects, and contact information, enhancing accessibility and engagement with potential clients.</p>
-                    <a href="#" class="btn close-btn" onclick="toggleDetails('project3')">Close</a>
-                </div>
-            </div>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/profile-pic-2.png"
+            alt="Anwesh Krishna B profile picture"
+          />
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <div class="section-heading">
-                <h2>Technical Skills</h2>
-                <div class="underline"></div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Bachelor of Engineering in Computer Science and Technology <br />Vivekananda College of Engineering and Technology, Puttur, Karnataka</p>
             </div>
-            <ul class="skills-list">
-                <li>Fluent in: Python, C, Dart</li>
-                <li>Proficient in: Java</li>
-                <li>Web Development: HTML, CSS, JavaScript, AngularJS, PHP</li>
-                <li>Android Development: Android Studio, Dart, Flutter</li>
-                <li>Tools & Technologies: Git, GitHub, XAMPP, Firebase</li>
-            </ul>
+          </div>
+          <div class="text-container">
+            <p>
+              I am Anwesh Krishna B, a dedicated and enthusiastic engineering student at Vivekananda College of Engineering and Technology. With a strong passion for software development, I specialize in Android and web development, consistently seeking to enhance my skills and stay abreast of the latest industry trends. My academic journey and hands-on projects have equipped me with a solid foundation in these areas, driving my commitment to create innovative and user-friendly applications.
+            </p>
+          </div>
         </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="section-heading">
-                <h2>Contact Me</h2>
-                <div class="underline"></div>
+    
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Programming Languages</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Fluent</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C</h3>
+                  <p>Fluent</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Dart</h3>
+                  <p>Fluent</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
             </div>
-            <form action="#" method="post" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Web Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Experienced</p>
                 </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>AngularJS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PHP</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Android Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Android Studio</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Dart</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Flutter</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Tools & Technologies</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>GitHub</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>XAMPP</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Firebase</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
     </section>
-
-    <!-- Footer Section -->
+    
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">BE_HELPER</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Anwesh003/BE_HELPER'"
+              >
+                Github
+              </button>
+              <!-- <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Anwesh003/BE_HELPER'"
+              >
+                Live Demo
+              </button> -->
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Workforce Management System</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Anwesh003/workforce_management'"
+              >
+                Github
+              </button>
+              <!-- <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Anwesh003/workforce_management'"
+              >
+                Live Demo
+              </button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:anweshkrishnab6324@gmail.com">Anweshkrishnab6324@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/anwesh-krishna-b-b29918220/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Anwesh Krishna B. All rights reserved.</p>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
+      </nav>
+      <p>Copyright &#169; 2024 Anwesh Krishna B. All Rights Reserved.</p>
     </footer>
-
-    <!-- Scripts -->
-    <script src="scripts.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
