@@ -43,7 +43,7 @@
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Anwesh Krishna B</h1>
-        <p class="section__text__p2">Frontend Developer</p>
+        <p class="section__text__p2">Android and web developer</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -96,7 +96,7 @@
           </div>
           <div class="text-container">
             <p>
-              I am Anwesh Krishna B, a dedicated and enthusiastic engineering student at Vivekananda College of Engineering and Technology. With a strong passion for software development, I specialize in Android and web development, consistently seeking to enhance my skills and stay abreast of the latest industry trends. My academic journey and hands-on projects have equipped me with a solid foundation in these areas, driving my commitment to create innovative and user-friendly applications.
+              I am Anwesh Krishna B, a Engineering student with a deep commitment to Computer Science and a specialization in Android and web development. Demonstrates a proactive approach to skill enhancement and staying abreast of the latest industry trends. Through a rigorous academic background and diverse hands-on projects, has developed a robust foundation in software development, driving a passion for creating innovative and user-centric applications
             </p>
           </div>
         </div>
@@ -333,7 +333,9 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">BE_HELPER</h2>
+            <h2 class="experience-sub-title project-title">BE_HELPER - Engineering Study Resource App</h2>
+            <p>Engineered the BE_HELPER mobile application using Flutter and Dart, providing a comprehensive platform for
+              engineering students to access study materials and relevant information.</p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -357,7 +359,9 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Workforce Management System</h2>
+            <h2 class="experience-sub-title project-title">Agricultural Workforce Management System</h2>
+            <p>Developed an Agricultural Workforce Management System to assist farmers in efficiently managing the hiring
+              and scheduling of workers for various tasks such as planting, harvesting, and maintenance.</p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -403,6 +407,48 @@
           <p><a href="https://www.linkedin.com/in/anwesh-krishna-b-b29918220/">LinkedIn</a></p>
         </div>
       </div>
+      <div class="contact-form-container">
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit" class="btn btn-color-1">Send Message</button>
+        </form>
+    </div>
+
+    <script>
+        // Existing toggleMenu function
+        function toggleMenu() {
+            const menu = document.querySelector(".menu-links");
+            const icon = document.querySelector(".hamburger-icon");
+            menu.classList.toggle("open");
+            icon.classList.toggle("open");
+        }
+
+        // Contact form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Create a mailto link
+            const subject = encodeURIComponent('New Message from Contact Form');
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage:\n${message}`);
+            const mailtoLink = `mailto:anweshkrishnab6324@gmail.com?subject=${subject}&body=${body}`; // Change to your email
+
+            // Open the user's email client
+            window.location.href = mailtoLink;
+        });
+    </script>
     </section>
     <footer>
       <nav>
